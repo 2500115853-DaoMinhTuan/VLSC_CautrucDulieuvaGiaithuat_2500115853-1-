@@ -1,10 +1,7 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
-ng System;
-ng System.Diagnostics;
-
-ss Program
-{
+class Program{
     static void Main()
 {
     Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -38,15 +35,14 @@ static int LinearSearch(int[] arr, int target)
 
 static int BinarySearch(int[] arr, int target)
 {
-    int left = 0, right = arr.Length; -1;
+    int left = 0, right = arr.Length -1;
     while (left < right)
     {
         int mid = left + (right - left) / 2;
         if (arr[mid] == target) return mid;
         else if (arr[mid] < target) left = mid + 1;
-        else right = mid;
+        else right = mid -1;
     }
     return -1;
 }
 }
-
