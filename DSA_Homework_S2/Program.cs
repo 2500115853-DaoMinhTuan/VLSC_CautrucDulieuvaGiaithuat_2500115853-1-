@@ -4,7 +4,7 @@ class Program
     static int TinhTong(int n)
     {
         if (n == 1) return 1;
-        return n + TinhTong(n - 1);
+        return n + TinhTong(n - 1); 
     }
 
     static void Main()
